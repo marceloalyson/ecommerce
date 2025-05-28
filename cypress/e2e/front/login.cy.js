@@ -31,7 +31,7 @@ describe('Login', () => {
 
   describe('Realizando logout', () => {
     users.usuarioValido.forEach((user) => {
-      it('Logout após login - ' + user.email, () => {
+      it('Logout após login', () => {
         loginPage.clickLoginMain();
         loginPage.submitLogin(user.email, user.password);
         cy.contains(`Welcome ${user.email}`, { timeout: 10000 }).should('be.visible');
